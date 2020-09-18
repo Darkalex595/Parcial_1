@@ -1,43 +1,76 @@
 header {
-
-
+  display: flex;
+  justify-content: center;
 }
 
 
 h2 {
-
+  float: left;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 33%;
+  margin: 5px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .nav {
-
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 
   }
 
   li {
-
-
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 17%;
+    margin: 5px;
+    text-align: center;
+    list-style: none;
   }
 
   .content{
+    border-width: 3px;
+    border-style: solid;
+    border-color: black; 
+    display: flex; 
 
 }
 
   .aside {
-
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    float: left;
+    height: 200px;
+    width: 200%;
   }
 
   .slidebox{
-
-   
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .article{
-
+    display: flex;
+    float: left;
   }
 
 
 .poem{
-
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
 }
 
 
@@ -45,32 +78,42 @@ h2 {
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
     .article {
-
+      clear: both;
+      display: flex;
+      flex-direction: column;
   } 
 header{
-
+  display: none;
 }
+
+.aside{
+  height: 400px;
+  }
 }
 
 /*  Small devices    */
 @media (max-width:599px) {
 
 header,.content{
-
+  display: none;
 }
 
 .nav {
 
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    clear: both;
   }
 
 
 .nav > li {
+  width: 90%;
+  margin-bottom: 120px;
 
 }
 
 
 }
-
 
   
