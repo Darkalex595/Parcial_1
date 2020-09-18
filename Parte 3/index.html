@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" type ="text/css" href="style.css">
+<link rel="stylesheet">
 
 
 <script>
@@ -29,7 +29,19 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 
 **/
 
-// CREA TU FUNCION challenge1 aqui 
+function challenge1(){
+    var number = prompt("Cuantos botones se quieren?")
+
+    var auxDiv = document.getElementById("dummy");
+
+    for(var i=0; i<number; i++){
+        var button = document.createElement("BUTTON");
+        var name =  document.createTextNode(nombres[i]);
+        button.appendChild(name);
+        auxDiv.appendChild(button);
+        
+    }
+}
 
 
 
@@ -40,7 +52,13 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 
 **/
 
-// CREA TU FUNCION challenge2 2 aquí.
+function challenge2(){
+
+for(var i=0; i < nombres.length; i++){
+    var names = nombres[i].toUpperCase()
+    console.log(names);
+}
+}
 
 
 
@@ -67,7 +85,25 @@ Deberia escribir en consola la concatenación de nombre + color + raza para el o
 Invoca la función para validar su funcionalidad.
 
 */
+function Dog(Nombre, Color, Raza){
+    this.Nombre = Nombre;
+    this.Color = Color;
+    this.Raza = Raza;
+}
 
+function presentar(Dog){
+    console.log("Nombre: " + Dog.Nombre + ", De color: " + Dog.Color + ", Raza: " + Dog.Raza);
+}
+
+
+function challenge3(){
+    var Dog1 = new Dog("Pluto", "Cafe", "Pastor Aleman");
+    presentar(Dog1);
+    var Dog2 = new Dog("Candy", "Amarillo", "Golden Retriever");
+    presentar(Dog2);
+    var Dog3 = new Dog("Max", "Cafe", "Pitbull");
+    presentar(Dog3);
+}
 
 
 
